@@ -153,6 +153,14 @@
             animation: slideIn 1s ease-out;
         }
         
+        @media (max-width: 768px) {
+            .slide-content {
+                right: 50%;
+                transform: translate(50%, -50%);
+                left: auto;
+            }
+        }
+        
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -766,676 +774,35 @@
                 display: flex;
             }
             
+            .logo {
+                font-size: 20px;
+            }
+            
+            .logo-icon {
+                font-size: 28px;
+            }
+            
+            .slider {
+                height: 500px;
+                margin-top: 140px;
+            }
+            
             .slide-content {
-                right: 5%;
-                padding: 30px;
+                right: 50%;
+                transform: translate(50%, -50%);
+                padding: 25px;
                 max-width: 90%;
+                width: 90%;
             }
             
             .slide-content h2 {
-                font-size: 32px;
+                font-size: 24px;
             }
             
             .slide-content p {
-                font-size: 16px;
+                font-size: 14px;
+                margin-bottom: 20px;
             }
             
-            .about-content,
-            .booking-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .top-bar .container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .social-buttons {
-                flex-direction: column;
-                padding: 0 20px;
-            }
-            
-            .social-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .location-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .map-container {
-                height: 350px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="top-bar">
-            <div class="container">
-                <div class="contact-info">
-                    <span>📞 +966 50 123 4567</span>
-                    <span>📧 info@brightsmile.sa</span>
-                </div>
-                <div>
-                    <span>🕐 السبت - الخميس: 9 صباحاً - 9 مساءً</span>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <div class="container">
-                <div class="nav-container">
-                    <div class="logo">
-                        <span class="logo-icon">🦷</span>
-                        <span>عيادة الابتسامة المشرقة</span>
-                    </div>
-                    <ul class="nav-links" id="navLinks">
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#services">الخدمات</a></li>
-                        <li><a href="#about">من نحن</a></li>
-                        <li><a href="#testimonials">آراء المرضى</a></li>
-                        <li><a href="#booking">احجز موعد</a></li>
-                        <li><a href="#location">الموقع</a></li>
-                    </ul>
-                    <div class="menu-toggle" id="menuToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Slider -->
-    <section class="slider" id="home">
-        <div class="slide active" style="background: linear-gradient(rgba(0,119,182,0.3), rgba(0,119,182,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><rect fill=%22%2390e0ef%22 width=%221200%22 height=%22600%22/><circle fill=%22%2300b4d8%22 cx=%22200%22 cy=%22150%22 r=%22100%22 opacity=%220.3%22/><circle fill=%22%230077b6%22 cx=%22900%22 cy=%22400%22 r=%22150%22 opacity=%220.2%22/><path fill=%22white%22 d=%22M600 250 Q650 200 700 250 Q750 300 800 250%22 stroke=%22white%22 stroke-width=%2210%22 fill=%22none%22 opacity=%220.5%22/></svg>');">
-            <div class="slide-content">
-                <h2>ابتسامتك الجميلة تبدأ هنا</h2>
-                <p>نقدم أحدث التقنيات في طب وتجميل الأسنان مع فريق من أمهر الأطباء المتخصصين</p>
-                <a href="#booking" class="btn">احجز موعدك الآن</a>
-            </div>
-        </div>
-        <div class="slide" style="background: linear-gradient(rgba(0,119,182,0.3), rgba(0,119,182,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><rect fill=%22%2348cae4%22 width=%221200%22 height=%22600%22/><circle fill=%22%2300b4d8%22 cx=%22300%22 cy=%22300%22 r=%22120%22 opacity=%220.4%22/><circle fill=%22white%22 cx=%22800%22 cy=%22200%22 r=%22100%22 opacity=%220.3%22/><rect fill=%22%230077b6%22 x=%22400%22 y=%22100%22 width=%22200%22 height=%22200%22 opacity=%220.2%22 transform=%22rotate(45 500 200)%22/></svg>');">
-            <div class="slide-content">
-                <h2>تجميل الأسنان بأحدث التقنيات</h2>
-                <p>حقق الابتسامة التي طالما حلمت بها مع خدمات التبييض والتجميل المتقدمة</p>
-                <a href="#services" class="btn">تعرف على خدماتنا</a>
-            </div>
-        </div>
-        <div class="slide" style="background: linear-gradient(rgba(0,119,182,0.3), rgba(0,119,182,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><rect fill=%22%2303045e%22 width=%221200%22 height=%22600%22/><circle fill=%22%2300b4d8%22 cx=%22600%22 cy=%22300%22 r=%22200%22 opacity=%220.2%22/><path d=%22M100 300 Q300 100 500 300 T900 300%22 stroke=%22%2300b4d8%22 stroke-width=%225%22 fill=%22none%22 opacity=%220.5%22/></svg>');">
-            <div class="slide-content">
-                <h2>رعاية شاملة لصحة أسنانك</h2>
-                <p>من الفحص الدوري إلى العمليات المتقدمة، نهتم بكل تفاصيل صحتك</p>
-                <a href="#about" class="btn">اعرف المزيد</a>
-            </div>
-        </div>
-        <div class="slider-controls">
-            <span class="slider-dot active" data-slide="0"></span>
-            <span class="slider-dot" data-slide="1"></span>
-            <span class="slider-dot" data-slide="2"></span>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>خدماتنا المتميزة</h2>
-                <p>نوفر مجموعة شاملة من خدمات طب وتجميل الأسنان</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🦷</div>
-                    <h3>تنظيف وتبييض الأسنان</h3>
-                    <p>احصل على أسنان بيضاء ناصعة باستخدام أحدث تقنيات التبييض الآمنة والفعالة</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>ابتسامة هوليوود</h3>
-                    <p>ابتسامة مثالية مع قشور الفينير والعدسات اللاصقة بأعلى جودة</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>تقويم الأسنان</h3>
-                    <p>تقويم الأسنان التقليدي والشفاف لإصلاح العيوب وتحسين المظهر</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌟</div>
-                    <h3>زراعة الأسنان</h3>
-                    <p>استعد أسنانك المفقودة بتقنيات الزراعة الحديثة ونتائج طبيعية</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💊</div>
-                    <h3>علاج الجذور</h3>
-                    <p>علاج جذور الأسنان بدون ألم باستخدام أحدث التقنيات</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">👶</div>
-                    <h3>طب أسنان الأطفال</h3>
-                    <p>رعاية خاصة ولطيفة لأسنان أطفالك في بيئة مريحة وآمنة</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#00b4d8;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#0077b6;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <rect width="500" height="400" fill="url(#grad1)" rx="15"/>
-                        <circle cx="250" cy="200" r="100" fill="white" opacity="0.2"/>
-                        <path d="M200 180 Q250 150 300 180" stroke="white" stroke-width="8" fill="none" stroke-linecap="round"/>
-                        <circle cx="220" cy="160" r="8" fill="white"/>
-                        <circle cx="280" cy="160" r="8" fill="white"/>
-                        <path d="M200 230 Q250 270 300 230" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-                        <text x="250" y="350" font-family="Cairo" font-size="32" fill="white" text-anchor="middle" font-weight="bold">د. محمد عبد الوهاب</text>
-                    </svg>
-                </div>
-                <div class="about-text">
-                    <h2>عن الدكتور محمد عبد الوهاب</h2>
-                    <p>استشاري طب وتجميل الأسنان مع أكثر من 15 عاماً من الخبرة في تقديم أفضل الخدمات الطبية والتجميلية للأسنان.</p>
-                    <p>حاصل على درجة الدكتوراه من جامعة الملك سعود، وعضو الجمعية السعودية لطب الأسنان، متخصص في زراعة الأسنان وتجميلها باستخدام أحدث التقنيات العالمية.</p>
-                    <p>نؤمن بأن كل مريض يستحق ابتسامة جميلة وصحية، ونعمل جاهدين لتحقيق ذلك من خلال خدماتنا المتميزة.</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">سنة خبرة</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5000+</span>
-                            <span class="stat-label">مريض سعيد</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">نسبة الرضا</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>آراء مرضانا</h2>
-                <p>ماذا يقول مرضانا عن تجربتهم معنا</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <p class="testimonial-text">تجربة رائعة! الدكتور محمد محترف جداً واهتمامه بالتفاصيل مذهل. حصلت على ابتسامة هوليوود وأنا سعيدة جداً بالنتيجة. أنصح الجميع بزيارة العيادة.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">س</div>
-                        <div class="author-info">
-                            <h4>سارة المطيري</h4>
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <p class="testimonial-text">كنت أخاف كثيراً من طبيب الأسنان، لكن الدكتور محمد وفريقه جعلوا التجربة مريحة جداً. العلاج كان بدون ألم تماماً والنتيجة أكثر من رائعة!</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">م</div>
-                        <div class="author-info">
-                            <h4>محمد العتيبي</h4>
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <p class="testimonial-text">عملت زراعة أسنان بعد سنوات من المعاناة. النتيجة فاقت توقعاتي! العيادة نظيفة جداً والفريق محترف. شكراً دكتور محمد على الاهتمام والرعاية.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ف</div>
-                        <div class="author-info">
-                            <h4>فاطمة القحطاني</h4>
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking -->
-    <section class="booking" id="booking">
-        <div class="container">
-            <div class="booking-content">
-                <div class="booking-info">
-                    <h2>احجز موعدك الآن</h2>
-                    <p>ابدأ رحلتك نحو ابتسامة أجمل وأصح. املأ النموذج وسنتواصل معك في أقرب وقت لتأكيد موعدك.</p>
-                    <ul class="booking-features">
-                        <li>استشارة مجانية أولية</li>
-                        <li>خطة علاج مخصصة</li>
-                        <li>أحدث التقنيات العالمية</li>
-                        <li>أسعار تنافسية وعروض مميزة</li>
-                        <li>فريق طبي متخصص</li>
-                        <li>مواعيد مرنة تناسب جدولك</li>
-                    </ul>
-                </div>
-                <div class="booking-form">
-                    <h3>نموذج الحجز</h3>
-                    <form id="bookingForm">
-                        <div class="form-group">
-                            <label for="name">الاسم الكامل *</label>
-                            <input type="text" id="name" required placeholder="أدخل اسمك الكامل">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">رقم الجوال *</label>
-                            <input type="tel" id="phone" required placeholder="+966 5X XXX XXXX">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">البريد الإلكتروني</label>
-                            <input type="email" id="email" placeholder="example@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">نوع الخدمة *</label>
-                            <select id="service" required>
-                                <option value="">اختر الخدمة</option>
-                                <option value="checkup">فحص عام</option>
-                                <option value="whitening">تبييض الأسنان</option>
-                                <option value="hollywood">ابتسامة هوليوود</option>
-                                <option value="braces">تقويم الأسنان</option>
-                                <option value="implant">زراعة الأسنان</option>
-                                <option value="root">علاج الجذور</option>
-                                <option value="kids">طب أسنان الأطفال</option>
-                                <option value="other">أخرى</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="date">التاريخ المفضل</label>
-                            <input type="date" id="date">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">ملاحظات إضافية</label>
-                            <textarea id="message" placeholder="أخبرنا عن أي تفاصيل إضافية..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">إرسال الطلب</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Booking -->
-    <section class="social-booking">
-        <div class="container">
-            <h2>احجز عبر وسائل التواصل الاجتماعي</h2>
-            <p>تواصل معنا مباشرة عبر قنواتنا الاجتماعية واحجز موعدك بسهولة</p>
-            <div class="social-buttons">
-                <a href="https://wa.me/966501234567?text=مرحباً، أريد حجز موعد في عيادة الابتسامة المشرقة" class="social-btn social-btn-whatsapp" target="_blank">
-                    <span class="social-icon">💬</span>
-                    <span>احجز عبر واتساب</span>
-                </a>
-                <a href="https://instagram.com/brightsmile_clinic" class="social-btn social-btn-instagram" target="_blank">
-                    <span class="social-icon">📷</span>
-                    <span>احجز عبر إنستغرام</span>
-                </a>
-                <a href="https://t.me/brightsmile_clinic" class="social-btn social-btn-telegram" target="_blank">
-                    <span class="social-icon">✈️</span>
-                    <span>احجز عبر تلغرام</span>
-                </a>
-                <a href="https://facebook.com/brightsmile.clinic" class="social-btn social-btn-facebook" target="_blank">
-                    <span class="social-icon">📘</span>
-                    <span>احجز عبر فيسبوك</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location -->
-    <section class="location-section" id="location">
-        <div class="container">
-            <div class="location-content">
-                <div class="location-info">
-                    <h2>موقع العيادة</h2>
-                    <div class="location-details">
-                        <div class="location-item">
-                            <span class="location-icon">📍</span>
-                            <div class="location-text">
-                                <h4>العنوان</h4>
-                                <p>الرياض، حي السليمانية، شارع الملك عبدالله، مبنى رقم 123، الدور الثاني</p>
-                            </div>
-                        </div>
-                        <div class="location-item">
-                            <span class="location-icon">📞</span>
-                            <div class="location-text">
-                                <h4>الهاتف</h4>
-                                <p>+966 50 123 4567<br>+966 11 234 5678</p>
-                            </div>
-                        </div>
-                        <div class="location-item">
-                            <span class="location-icon">🕐</span>
-                            <div class="location-text">
-                                <h4>ساعات العمل</h4>
-                                <p>السبت - الخميس: 9:00 صباحاً - 9:00 مساءً<br>الجمعة: مغلق</p>
-                            </div>
-                        </div>
-                        <div class="location-item">
-                            <span class="location-icon">📧</span>
-                            <div class="location-text">
-                                <h4>البريد الإلكتروني</h4>
-                                <p>info@brightsmile.sa<br>booking@brightsmile.sa</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.9370489775937!2d46.67242687585889!3d24.723671278085876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03c9e4b3f0b9%3A0x8c24f3b9c9b8f0b9!2z2KfZhNix2YrYp9i2INin2YTYs9i52YjYr9mK2Kk!5e0!3m2!1sar!2ssa!4v1699999999999!5m2!1sar!2ssa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>عيادة الابتسامة المشرقة</h3>
-                    <p>نقدم أفضل خدمات طب وتجميل الأسنان باستخدام أحدث التقنيات العالمية وفريق طبي متخصص.</p>
-                    <div class="social-links">
-                        <a href="#" title="فيسبوك">📘</a>
-                        <a href="#" title="تويتر">🐦</a>
-                        <a href="#" title="إنستغرام">📷</a>
-                        <a href="#" title="سناب شات">👻</a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#services">خدماتنا</a></li>
-                        <li><a href="#about">من نحن</a></li>
-                        <li><a href="#testimonials">آراء المرضى</a></li>
-                        <li><a href="#booking">احجز موعد</a></li>
-                        <li><a href="#location">الموقع</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>معلومات الاتصال</h3>
-                    <ul>
-                        <li>📍 الرياض، حي السليمانية، شارع الملك عبدالله</li>
-                        <li>📞 +966 50 123 4567</li>
-                        <li>📧 info@brightsmile.sa</li>
-                        <li>🕐 السبت - الخميس: 9 ص - 9 م</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>خدماتنا</h3>
-                    <ul>
-                        <li><a href="#services">تبييض الأسنان</a></li>
-                        <li><a href="#services">ابتسامة هوليوود</a></li>
-                        <li><a href="#services">تقويم الأسنان</a></li>
-                        <li><a href="#services">زراعة الأسنان</a></li>
-                        <li><a href="#services">علاج الجذور</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 عيادة الابتسامة المشرقة. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Slider Functionality
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.slider-dot');
-        let currentSlide = 0;
-
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            currentSlide = (n + slides.length) % slides.length;
-            
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        // Auto slide
-        setInterval(nextSlide, 5000);
-
-        // Dot navigation
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-            });
-        });
-
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerOffset = 120;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Form Submission
-        document.getElementById('bookingForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            
-            alert(`شكراً ${name}! تم استلام طلب حجزك بنجاح.\nسنتواصل معك قريباً على رقم: ${phone}\n\nالخدمة المطلوبة: ${service}`);
-            
-            // Reset form
-            e.target.reset();
-        });
-
-        // Animation on Scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Add animation to elements
-        document.querySelectorAll('.service-card, .testimonial-card, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
-
-        // Set minimum date for booking
-        const dateInput = document.getElementById('date');
-        const today = new Date().toISOString().split('T')[0];
-        dateInput.setAttribute('min', today);
-
-        // Load dynamic data from admin panel
-        function loadDynamicData() {
-            // Load offers
-            const savedOffers = JSON.parse(localStorage.getItem('offers'));
-            if (savedOffers && savedOffers.length > 0) {
-                updateServicesSection(savedOffers);
-            }
-
-            // Load gallery images
-            const savedImages = JSON.parse(localStorage.getItem('galleryImages'));
-            if (savedImages && savedImages.length > 0) {
-                createGallerySection(savedImages);
-            }
-        }
-
-        function updateServicesSection(offers) {
-            const servicesGrid = document.querySelector('.services-grid');
-            
-            // Keep only first 3 default services, then add dynamic offers
-            const defaultServices = Array.from(servicesGrid.children).slice(0, 3);
-            servicesGrid.innerHTML = '';
-            
-            defaultServices.forEach(service => servicesGrid.appendChild(service));
-            
-            // Add dynamic offers
-            offers.slice(0, 3).forEach(offer => {
-                const serviceCard = document.createElement('div');
-                serviceCard.className = 'service-card';
-                serviceCard.innerHTML = `
-                    <div class="service-icon">🎁</div>
-                    <h3>${offer.title}</h3>
-                    <p>${offer.description}</p>
-                    <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid #e0e0e0;">
-                        <p style="font-weight: 700; color: #00b4d8; font-size: 20px;">${offer.price}</p>
-                        ${offer.discount ? `<p style="color: #4CAF50; font-weight: 600; margin-top: 5px;">🎉 ${offer.discount}</p>` : ''}
-                    </div>
-                `;
-                servicesGrid.appendChild(serviceCard);
-            });
-        }
-
-        function createGallerySection(images) {
-            // Check if gallery section exists
-            let gallerySection = document.getElementById('gallery-section');
-            
-            if (!gallerySection) {
-                // Create gallery section
-                gallerySection = document.createElement('section');
-                gallerySection.id = 'gallery-section';
-                gallerySection.className = 'services';
-                gallerySection.style.background = 'linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%)';
-                
-                gallerySection.innerHTML = `
-                    <div class="container">
-                        <div class="section-title">
-                            <h2>معرض الصور</h2>
-                            <p>تصفح أحدث أعمالنا ونتائج مرضانا</p>
-                        </div>
-                        <div class="gallery-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                        </div>
-                    </div>
-                `;
-                
-                // Insert before testimonials section
-                const testimonialsSection = document.getElementById('testimonials');
-                testimonialsSection.parentNode.insertBefore(gallerySection, testimonialsSection);
-            }
-
-            const galleryContainer = gallerySection.querySelector('.gallery-container');
-            galleryContainer.innerHTML = '';
-
-            // Add images to gallery
-            images.slice(0, 6).forEach(image => {
-                const galleryItem = document.createElement('div');
-                galleryItem.style.cssText = `
-                    border-radius: 15px;
-                    overflow: hidden;
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-                    transition: all 0.3s;
-                    cursor: pointer;
-                `;
-                galleryItem.innerHTML = `
-                    <img src="${image.src}" alt="${image.name}" style="width: 100%; height: 300px; object-fit: cover; transition: all 0.3s;">
-                `;
-                
-                galleryItem.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                    this.style.boxShadow = '0 20px 50px rgba(0,119,182,0.3)';
-                    this.querySelector('img').style.transform = 'scale(1.1)';
-                });
-                
-                galleryItem.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                    this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
-                    this.querySelector('img').style.transform = 'scale(1)';
-                });
-                
-                galleryItem.addEventListener('click', function() {
-                    // Create lightbox
-                    const lightbox = document.createElement('div');
-                    lightbox.style.cssText = `
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: rgba(0,0,0,0.95);
-                        z-index: 10000;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 20px;
-                    `;
-                    lightbox.innerHTML = `
-                        <img src="${image.src}" style="max-width: 90%; max-height: 90vh; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
-                    `;
-                    lightbox.addEventListener('click', () => lightbox.remove());
-                    document.body.appendChild(lightbox);
-                });
-                
-                galleryContainer.appendChild(galleryItem);
-            });
-        }
-
-        // Load data on page load
-        window.addEventListener('load', loadDynamicData);
-    </script>
-</body>
-</html>
+            .btn {
+                padding: 1
